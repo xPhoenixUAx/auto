@@ -1,0 +1,635 @@
+/* Загальні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth; /* Додає плавне прокручування */
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Хедер */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(
+    135deg,
+    #2c3e50,
+    #34495e
+  ); /* Градієнт для хедера */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Тінь для глибини */
+}
+
+.header.scrolled {
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.6),
+    rgba(44, 62, 80, 0.6)
+  ); /* Напівпрозорий градієнт */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4); /* Зміна тіні при прокрутці */
+  backdrop-filter: blur(10px); /* Матовий ефект */
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1); /* Ефект при ховері */
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  color: #ecf0f1; /* Світлий колір для тексту */
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #e74c3c; /* Червоний колір при ховері */
+  color: #fff;
+}
+
+/* Стилі для меню-гамбургера */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #ecf0f1;
+  cursor: pointer;
+  z-index: 1010; /* Збільшуємо пріоритет */
+}
+
+/* Мобільний вигляд */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Спочатку приховане */
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #2c3e50; /* Темний фон для меню на мобільному */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav.active {
+    display: flex; /* Зробити меню видимим при активному класі */
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu-toggle {
+    display: block; /* Відображати гамбургер-меню на мобільних */
+  }
+}
+
+/*Catalog*/
+/* Секція каталогу */
+.catalog {
+  background: #f4f4f4;
+  padding: 50px 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  margin-top: 150px;
+}
+
+.catalog h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.catalog-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  opacity: 0;
+  animation: fadeInDescription 1.5s ease-in-out forwards;
+}
+
+.catalog-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.car-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInCard 1s ease-in-out forwards;
+}
+
+.car-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.car-card img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.car-card img:hover {
+  transform: scale(1.1);
+}
+
+.car-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.car-card p {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDescription {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивність */
+@media (max-width: 1024px) {
+  .catalog-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog h2 {
+    font-size: 2rem;
+  }
+
+  .catalog-description {
+    font-size: 1rem;
+  }
+
+  .car-card {
+    width: 100%;
+  }
+}
+/* Секція сервісів */
+.services {
+  background: #fff;
+  padding: 50px 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.service-card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInCard 1s ease-in-out forwards;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-card img:hover {
+  transform: scale(1.1);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+}
+.services-description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #555;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInCard 1s ease-in-out forwards;
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивність */
+@media (max-width: 1024px) {
+  .service-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*About-us*/
+/* Section Styling */
+.about-us {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about-us h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.about-us .about-description {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about-values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.value-block {
+  background: rgba(255, 255, 255, 0.5); /* більше прозорості */
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 45%;
+  min-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(241, 241, 241, 0.5)
+  ); /* градієнт з більшою прозорістю */
+}
+
+.value-block:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.value-block h3 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.value-block p,
+.value-block ul {
+  font-size: 16px;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.value-block ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.value-block li {
+  margin-bottom: 15px;
+}
+
+.value-block strong {
+  color: #2c3e50;
+}
+
+.about-footer {
+  font-size: 20px;
+  margin-top: 40px;
+  color: #f5f5f5;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.about-footer strong {
+  color: #2c3e50;
+}
+
+/* Background Texture */
+.about-us {
+  background-image: url("./img/wmremove-transformed.jpeg"); /* Replace with actual texture path */
+  background-blur: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.about-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay to enhance text readability */
+  z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .value-block {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+/* Стилі для секції Contact */
+.contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("./img/DeWatermark.ai_1739027789615.png"); /* Ще темніший сірий градієнт поверх текстури */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: #989898;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Стилі для форми */
+form {
+  background: rgba(255, 255, 255, 0.35);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Стилі для елементів форми */
+label {
+  font-size: 1.1rem;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: 1px solid #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* Кнопка */
+button {
+  padding: 15px 30px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #1f6391;
+}
+
+/* Стилі для анімації форми */
+form:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+/*Footer*/
+.footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  background-color: #34495e;
+  padding: 10px 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #3498db;
+}
