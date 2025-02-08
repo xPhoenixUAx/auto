@@ -244,15 +244,18 @@ body {
 
 @media (max-width: 480px) {
   .catalog h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .catalog-description {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .car-card {
     width: 100%;
+  }
+  .car-card p {
+    font-size: 0.8rem;
   }
 }
 /* Секція сервісів */
@@ -374,6 +377,18 @@ body {
 @media (max-width: 768px) {
   .service-container {
     grid-template-columns: 1fr;
+  }
+  .services h2 {
+    font-size: 1.7rem;
+  }
+  .services h3 {
+    font-size: 1.1rem;
+  }
+  .services-description {
+    font-size: 1rem;
+  }
+  .service-card p {
+    font-size: 0.8rem;
   }
 }
 
@@ -502,6 +517,22 @@ body {
   .value-block {
     width: 100%;
     margin-bottom: 20px;
+  }
+  .value-block h3 {
+    font-size: 18px;
+  }
+  .value-block p,
+  .value-block ul {
+    font-size: 12px;
+  }
+  .about-us h2 {
+    font-size: 32px;
+  }
+  .about-us .about-description {
+    font-size: 12px;
+  }
+  .about-footer {
+    font-size: 14px;
   }
 }
 /* Стилі для секції Contact */
