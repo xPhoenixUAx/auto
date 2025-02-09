@@ -1,115 +1,104 @@
+/* Загальні стилі для сторінки */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
+h1,
+h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+p,
+ul {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+/* Логотип і навігація */
 header {
-  background-color: #2c3e50;
+  background-color: #333;
   color: white;
-  padding: 10px 20px;
-}
-
-header .logo img {
-  max-width: 150px;
-}
-
-header .nav {
+  padding: 15px 0;
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header .nav a {
+.logo img {
+  width: 150px;
+}
+
+.nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  margin-left: 20px;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
-header .nav a:hover {
-  color: #3498db;
+.nav a:hover {
+  color: #f44336;
 }
 
+/* Контейнер з політикою конфіденційності */
 .privacy-policy {
-  background-color: #ffffff;
-  padding: 50px 20px;
-  text-align: left;
-  max-width: 1200px;
+  background-color: white;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-container {
+  max-width: 900px;
   margin: 0 auto;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
 }
 
-.privacy-policy h1 {
-  color: #2c3e50;
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.privacy-policy h2 {
-  color: #34495e;
-  font-size: 28px;
-  margin-top: 30px;
-}
-
-.privacy-policy p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
+.privacy-container h1 {
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.privacy-policy ul {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 20px;
+.privacy-container ul {
+  list-style: none;
+  padding-left: 20px;
 }
 
-.privacy-policy ul li {
-  margin-bottom: 10px;
+.privacy-container ul li {
+  margin-bottom: 15px;
 }
 
-.privacy-policy ul li strong {
-  color: #2c3e50;
-}
-
+/* Підвал */
 footer {
-  background-color: #2c3e50;
+  background-color: #333;
   color: white;
-  padding: 40px 20px;
+  padding: 15px 0;
   text-align: center;
-  font-size: 14px;
 }
 
 footer .footer-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-footer .footer-logo img {
-  max-width: 150px;
-}
-
-footer .footer-bottom {
-  background-color: #34495e;
-  padding: 10px 0;
-}
-
-footer .footer-links {
-  margin-top: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 footer .footer-links a {
-  color: #ecf0f1;
+  color: white;
   text-decoration: none;
-  transition: color 0.3s ease;
+  margin: 0 10px;
+  font-size: 1rem;
 }
 
 footer .footer-links a:hover {
-  color: #3498db;
+  color: #f44336;
 }
