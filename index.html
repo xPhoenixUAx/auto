@@ -3,310 +3,238 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Premium Auto Sales & Service</title>
+    <title>Wholesale & Retail Cars</title>
     <link rel="stylesheet" href="styles.css" />
-
-    />
     <link rel="icon" href="images/favicon.png" type="image/png" />
   </head>
   <body>
-    <header class="sidebar">
-      <a href="#hero" class="nav-item">
-        <div class="icon">
-          <svg
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M3 9L12 2L21 9V20H3V9Z" />
-            <path d="M9 22V12H15V22" />
-          </svg>
-        </div>
-        <div class="label">Home</div>
-      </a>
-      <a href="#services" class="nav-item">
-        <div class="icon">
-          <svg
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <path d="M12 6V12L16 14" />
-          </svg>
-        </div>
-        <div class="label">Services</div>
-      </a>
-      <a href="#about-us" class="nav-item">
-        <div class="icon">
-          <svg
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <path d="M12 16V12M12 8H12.01" />
-          </svg>
-        </div>
-        <div class="label">About</div>
-      </a>
-      <a href="#contact" class="nav-item">
-        <div class="icon">
-          <svg
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M21 10V14H3V10" />
-            <path d="M5 10V6H19V10" />
-            <path d="M8 6V4H16V6" />
-          </svg>
-        </div>
-        <div class="label">Contact</div>
-      </a>
+    <header class="header">
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./img/logo.png" alt="Logo" />
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#services">Services</a>
+        <a href="#about-us">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="menu-toggle">&#9776;</div>
     </header>
 
-    <section id="hero" class="hero">
-      <h1 class="hero-title">Premium Auto Sales & Service</h1>
-      <p class="hero-tagline">
-        Your trusted partner in buying and maintaining new and used cars.
-      </p>
-    </section>
-
     <section id="catalog" class="catalog">
-      <h2>Our Exclusive Car Collection</h2>
+      <h2>Car Catalog</h2>
       <p class="catalog-description">
-        Discover our curated selection of premium vehicles, ranging from
-        sophisticated sedans to cutting-edge electric SUVs. Every car in our
-        collection has been handpicked for its exceptional performance, design,
-        and innovative features, ensuring you drive away with both luxury and
-        reliability.
+        Explore our premium selection of cars, featuring the latest models from
+        luxury sedans to eco-friendly electric SUVs. Each vehicle is carefully
+        selected to provide the best performance and style for our customers.
       </p>
       <div class="catalog-container">
         <div class="car-card">
-          <img src="./img/sedan.png" alt="Luxury Sedan" />
-          <h3>Prestige Sedan</h3>
+          <img src="./img/sedan.png" alt="Car Model 1" />
+          <h3>Luxury Sedan</h3>
           <p>
-            Indulge in the ultimate driving experience with our prestige sedan.
-            Crafted for those who appreciate top-tier comfort, refined design,
-            and exceptional performance at every turn.
+            Experience unparalleled luxury and performance with our luxury
+            sedan. Perfect for those who demand comfort and style.
           </p>
         </div>
         <div class="car-card">
-          <img src="./img/coup.png" alt="Sport Coupe" />
-          <h3>Dynamic Coupe</h3>
+          <img src="./img/coup.png" alt="Car Model 2" />
+          <h3>Sport Coupe</h3>
           <p>
-            Unleash the thrill of speed and precision with our dynamic coupe.
-            Built for those who live for the rush of the road and demand both
-            power and elegance.
+            Our sport coupe combines speed and elegance. Designed for those who
+            crave adventure and power on the road.
           </p>
         </div>
         <div class="car-card">
-          <img src="./img/suv.png" alt="Electric SUV" />
-          <h3>Next-Gen Electric SUV</h3>
+          <img src="./img/suv.png" alt="Car Model 3" />
+          <h3>Electric SUV</h3>
           <p>
-            Step into the future of driving with our next-gen electric SUV.
-            Combining sustainability, exceptional efficiency, and the latest
-            technology, it's the perfect ride for modern adventurers.
+            Drive into the future with our electric SUV. Sustainable, efficient,
+            and packed with cutting-edge technology.
           </p>
         </div>
         <div class="car-card">
-          <img src="./img/van.png" alt="Electric Van" />
-          <h3>Eco-Friendly Electric Van</h3>
+          <img src="./img/van.png" alt="Van Model" />
+          <h3>Electric Van</h3>
           <p>
-            Explore the future of eco-friendly transportation with our electric
-            van. Designed for versatility, comfort, and sustainability, it's the
-            ideal solution for both business and leisure.
+            Discover the future of transportation with our electric van.
+            Spacious, eco-friendly, and designed for both comfort and
+            efficiency.
           </p>
         </div>
       </div>
     </section>
 
     <section class="services" id="services">
-      <h2>Our Expertise</h2>
+      <h2>Our Services</h2>
       <p class="services-description">
-        At our service center, we specialize in delivering tailored solutions
-        for all car owners. Whether you need expert maintenance, advanced
-        diagnostics, or personalized modifications, our dedicated team ensures
-        your vehicle performs flawlessly. With a commitment to excellence, we
-        offer services that not only meet but exceed your expectations, all
-        while maintaining the highest standards of quality and care.
+        We offer a wide range of services to meet the needs of every car owner.
+        From routine maintenance to specialized diagnostics and customization,
+        our expert team ensures your vehicle stays in peak condition. We’re
+        committed to delivering outstanding service with attention to detail and
+        customer satisfaction.
       </p>
       <div class="service-container">
         <div class="service-card">
-          <img src="./img/car-sales.png" alt="Vehicle Maintenance" />
-          <h3>Comprehensive Vehicle Care</h3>
+          <img src="./img/optimizing.png" alt="Maintenance" />
+          <h3>Vehicle Maintenance</h3>
           <p>
-            Keep your car in pristine condition with our comprehensive vehicle
-            care services. We provide essential upkeep like oil changes, tire
-            balancing, brake inspections, and fluid replenishment to maintain
-            your car's performance. Our team uses state-of-the-art diagnostic
-            tools to catch potential issues early, ensuring your car runs
-            smoothly and avoids expensive repairs in the future. Whether it’s
-            routine servicing or preparation for an adventure, we’re here to
-            keep your car at its best.
+            Regular vehicle maintenance is essential for keeping your car
+            running smoothly and efficiently. Our experienced technicians offer
+            comprehensive maintenance services, including oil changes, tire
+            rotations, brake checks, and fluid refills, ensuring your vehicle is
+            always in top condition. With state-of-the-art equipment and a keen
+            eye for detail, we provide preventative maintenance to help avoid
+            costly repairs and extend the life of your car. Whether you're
+            preparing for a long road trip or just need a routine check-up,
+            trust us to keep your vehicle performing at its best.
           </p>
         </div>
         <div class="service-card">
-          <img src="./img/diagnostic.png" alt="Vehicle Diagnostics" />
-          <h3>Cutting-Edge Diagnostics</h3>
+          <img src="./img/analytic.png" alt="Diagnostics" />
+          <h3>Advanced Diagnostics</h3>
           <p>
-            Our advanced diagnostic services leverage the latest technology to
-            provide precise insights into your car's health. By interfacing with
-            your vehicle’s onboard systems, we identify everything from engine
-            issues to subtle sensor malfunctions. Early detection allows us to
-            resolve problems before they escalate, saving you time and money.
-            Trust our experts to deliver accurate and efficient diagnostics to
-            maintain your car’s optimal performance.
+            Our advanced diagnostic services utilize cutting-edge technology to
+            detect even the most subtle issues in your vehicle. By connecting to
+            your car's onboard computer system, we can quickly identify problems
+            with the engine, transmission, brakes, and more. This proactive
+            approach helps us catch potential issues early before they become
+            major repairs. Whether it's a warning light on your dashboard or a
+            performance issue you're noticing, our expert team can provide a
+            comprehensive analysis and recommend the best course of action. We
+            strive to deliver precise and reliable diagnostics to keep your car
+            running at its peak.
           </p>
         </div>
         <div class="service-card">
-          <img src="./img/customization.png" alt="Car Customization" />
-          <h3>Personalized Vehicle Enhancements</h3>
+          <img src="./img/painting.png" alt="Customization" />
+          <h3>Car Customization</h3>
           <p>
-            Elevate your driving experience with our bespoke car customization
-            services. From interior upgrades that improve comfort to exterior
-            modifications that make a bold statement, we offer a variety of
-            personalization options. Our skilled team works closely with you to
-            create the ideal look and functionality for your vehicle, using the
-            finest materials and craftsmanship. Whether it’s a custom paint job,
-            performance enhancements, or a complete redesign, we transform your
-            car into a one-of-a-kind masterpiece.
+            Transform your vehicle into a unique reflection of your personality
+            and style with our high-quality car customization services. Whether
+            you're looking to enhance the interior for added comfort, modify the
+            exterior for a more aggressive or sleek look, or add cutting-edge
+            technology to improve performance, we offer a full range of
+            customization options. Our expert team works with you to design
+            modifications that meet your vision and specifications, using only
+            the best materials and craftsmanship. From custom paint jobs and
+            wraps to performance upgrades and interior redesigns, we ensure that
+            every modification is done with precision and attention to detail.
+            Personalize your vehicle today and make a statement on the road.
           </p>
         </div>
       </div>
     </section>
 
     <section id="about-us" class="about-us">
-      <div class="wrap">
-        <h2>About Us</h2>
-        <p class="about-description">
-          Welcome to <strong>Premium Auto Sales & Service</strong>, where
-          quality meets affordability. We are proud to offer an extensive range
-          of both wholesale and retail vehicles that meet a variety of tastes
-          and requirements. From sophisticated luxury sedans to modern,
-          eco-friendly electric cars, we make sure each car in our collection
-          meets the highest standards, ensuring you drive away with confidence
-          and satisfaction.
-        </p>
-        <p class="about-description">
-          With decades of experience in the automotive market, we understand how
-          important it is to make the right choice when purchasing a vehicle.
-          That's why we aim to provide a smooth, straightforward experience from
-          beginning to end. Our expert team is here to assist you through each
-          step – from finding the ideal car to arranging financing and offering
-          continued support after the purchase.
-        </p>
-        <div class="about-values">
-          <div class="value-block">
-            <h3>Our Mission</h3>
-            <p>
-              At <strong>Premium Auto Sales & Service</strong>, our mission is
-              simple: to provide exceptional vehicles that offer the perfect
-              balance of luxury, performance, and sustainability. Whether you're
-              after a high-end sedan, a sporty coupe, or a family-friendly
-              electric car, our goal is to offer a diverse selection that caters
-              to all budgets and preferences. We are committed to offering not
-              only the best cars but also exceptional service built on trust,
-              transparency, and integrity.
-            </p>
-          </div>
-          <div class="value-block">
-            <h3>Our Values</h3>
-            <ul>
-              <li>
-                <strong>Quality:</strong> Each vehicle we sell undergoes a
-                thorough inspection to meet our rigorous safety and performance
-                standards. Our focus on quality ensures that all our cars are
-                reliable, durable, and made to last.
-              </li>
-              <li>
-                <strong>Customer Satisfaction:</strong> Your satisfaction is our
-                top priority. We know that purchasing a car is a big decision,
-                and we’re dedicated to making you feel confident and informed
-                throughout the entire process. Our team takes the time to
-                understand your unique needs, guiding you to the car that's
-                right for you.
-              </li>
-              <li>
-                <strong>Innovation:</strong> The automotive industry is
-                constantly evolving, and we make sure to stay ahead of the
-                curve. Whether it’s the latest in luxury performance or
-                cutting-edge electric and hybrid vehicles, our inventory always
-                includes the best the market has to offer.
-              </li>
-              <li>
-                <strong>Integrity:</strong> We believe in honesty and
-                transparency. Our business is built on trust, and we pride
-                ourselves on providing clear and honest information, helping you
-                make informed decisions without any pressure.
-              </li>
-              <li>
-                <strong>Sustainability:</strong> We are committed to reducing
-                our environmental impact by offering a variety of eco-friendly
-                vehicles, including electric and hybrid models, so you can make
-                a difference while driving.
-              </li>
-              <li>
-                <strong>Expertise:</strong> Our team brings years of experience
-                in the automotive industry, offering you expert advice and
-                guidance every step of the way. Whether you need help
-                understanding new technologies or selecting the right vehicle,
-                we’re here to assist you.
-              </li>
-            </ul>
-          </div>
+      <h2>About Us</h2>
+      <p class="about-description">
+        Welcome to <strong>Wholesale & Retail Cars</strong>, your premier
+        destination for the highest-quality vehicles at unbeatable prices. We
+        pride ourselves on offering a broad selection of both wholesale and
+        retail cars that cater to all preferences and needs. From luxurious
+        sedans that exude sophistication to eco-friendly electric vehicles
+        designed for the modern world, our inventory is carefully curated to
+        ensure that every customer finds a car they can trust and enjoy for
+        years to come.
+      </p>
+      <p class="about-description">
+        With years of experience in the automotive industry, we understand that
+        purchasing a vehicle is a significant decision. That's why we are
+        committed to providing a seamless, hassle-free experience from start to
+        finish. Our knowledgeable and friendly team is dedicated to guiding you
+        through every step of the car-buying process, from selecting the right
+        car to securing financing and ensuring you have the support you need
+        after the sale.
+      </p>
+      <div class="about-values">
+        <div class="value-block">
+          <h3>Our Mission</h3>
+          <p>
+            At <strong>Wholesale & Retail Cars</strong>, our mission is clear:
+            to offer our customers the best of both worlds – exceptional cars
+            that offer performance, luxury, and sustainability. Whether you are
+            looking for a high-end luxury sedan, a sporty coupe, or a
+            family-friendly electric vehicle, we strive to offer a selection
+            that meets a wide range of needs and budgets. Our goal is not only
+            to provide the highest quality cars but to do so with integrity,
+            transparency, and unparalleled customer service.
+          </p>
         </div>
-        <p class="about-footer">
-          At <strong>Premium Auto Sales & Service</strong>, we don’t just sell
-          vehicles – we offer an exceptional, tailored car-buying experience
-          designed to make your journey effortless and enjoyable. Whether you
-          visit our showroom or browse online, you can expect nothing less than
-          top-notch service and the finest vehicles. Join the many satisfied
-          customers who have found their perfect car with us, and let us help
-          you drive away in a vehicle that’s just right for your needs,
-          lifestyle, and budget.
-        </p>
+        <div class="value-block">
+          <h3>Our Values</h3>
+          <ul>
+            <li>
+              <strong>Quality:</strong> Every vehicle we sell undergoes thorough
+              inspections to ensure it meets the highest standards of safety,
+              performance, and durability. Our commitment to quality guarantees
+              that each car we offer is reliable, efficient, and built to last.
+            </li>
+            <li>
+              <strong>Customer Satisfaction:</strong> Your satisfaction is our
+              top priority. We understand that buying a car is a big decision,
+              and we are here to ensure that you feel confident and informed
+              every step of the way. Our team offers personalized service,
+              taking the time to understand your specific needs and preferences,
+              ensuring you find the perfect vehicle.
+            </li>
+            <li>
+              <strong>Innovation:</strong> As the automotive industry evolves,
+              we stay at the forefront of innovation. From the latest
+              high-performance luxury vehicles to cutting-edge electric and
+              hybrid models, we ensure that our inventory includes the best of
+              what the automotive world has to offer.
+            </li>
+            <li>
+              <strong>Integrity:</strong> Honesty and transparency are the
+              foundations of our business. We believe in building trust with our
+              customers by providing clear and straightforward information,
+              ensuring you make informed decisions without any pressure or
+              hidden agendas.
+            </li>
+            <li>
+              <strong>Sustainability:</strong> As part of our commitment to the
+              environment, we actively support the transition to sustainable
+              transportation solutions. We offer a range of eco-friendly
+              vehicles, including electric and hybrid cars, that help reduce
+              your carbon footprint and contribute to a greener future.
+            </li>
+            <li>
+              <strong>Expertise:</strong> With years of experience in the
+              automotive industry, our team has the knowledge and expertise to
+              guide you through every stage of your car-buying journey. Whether
+              you need help understanding the latest automotive technologies or
+              selecting the right vehicle for your lifestyle, we are here to
+              assist you.
+            </li>
+          </ul>
+        </div>
       </div>
+      <p class="about-footer">
+        At <strong>Wholesale & Retail Cars</strong>, we don’t just sell cars –
+        we provide a complete car-buying experience that’s designed to make your
+        life easier and more enjoyable. From the moment you step into our
+        showroom or browse our online catalog, you can expect nothing less than
+        exceptional service and the highest quality vehicles. Join our family of
+        satisfied customers today, and drive away in a car that perfectly fits
+        your needs, lifestyle, and budget.
+      </p>
     </section>
 
     <section id="contact" class="contact">
       <h2>Contact Us</h2>
       <form id="contact-form" action="submit_form.php" method="post">
-        <div class="input-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
 
-        <div class="input-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
 
-        <div class="input-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
         <button type="submit" id="submit-button">Send Message</button>
       </form>
@@ -319,7 +247,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Premium Auto Sales & Service. All Rights Reserved.</p>
+        <p>&copy; 2025 Wholesale & Retail Cars. All Rights Reserved.</p>
         <div class="footer-links">
           <a href="./terms.html">Terms of Service</a> |
           <a href="./privacy.html">Privacy Policy</a>
